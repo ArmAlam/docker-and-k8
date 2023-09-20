@@ -31,4 +31,16 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker image prune** -- Removes all unused images.
 
+- **docker run -p 3000:80 -d --rm <image_id>** -- Automatically removes a container when it stops.
+
+- **docker image inspect <image_id>** -- Shows image configuration.
+
+- **docker run -p 3000:80 -d --name <container_name> <image_id>** -- Sets container name.
+
+- **docker build -t <image_name:tag> .** -- Sets image name known as repository with an optional tag.
+
+
+
+
+
 

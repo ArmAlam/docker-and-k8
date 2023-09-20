@@ -23,4 +23,12 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker logs -f <container_id>.** -- Show console log.
 
+- **docker rm <container_id>.** -- Removes a container.
+
+- **docker rmi <image_id>.** -- Removes an image.
+
+- **docker container prune** -- Removes all stopped containers.
+
+- **docker image prune** -- Removes all unused images.
+
 

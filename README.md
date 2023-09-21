@@ -39,6 +39,8 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker build -t <image_name:tag> .** -- Sets image name known as repository with an optional tag.
 
+- **docker tag -t old_name:tag new_name:tag .** -- clone a new image using the old image, and  named after the new tag.
+
 
 
 

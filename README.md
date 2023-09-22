@@ -41,8 +41,37 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker tag -t old_name:tag new_name:tag .** -- clone a new image using the old image, and  named after the new tag.
 
+- **docker volume ls .** -- list all volume.
+
+- **docker run -d -p 3000:80 --rm --name <container_name> -v <volume_name>:<container_folder_path>  <image_name> .** -- create a named volume.
+
+- **docker run -d --rm -p 3000:80 --name <container_name> -v <volume_name>:<container_folder_path> -v "<host_machine_absoule_folder_path>:/<container_workdir>" -v /app/<persistent_file>  <image_name> .** -- create bind mount volume. persistent_file needed to be mapped as anonymous volument. Otherwise can be removed/overwritten by bind mount. In BIND MOUNT, a folder get mapped to container.
 
 
 
 
 
+
+
+
+
+
+
+
+
+## TERMS
+
+Two types of external data sources - 1. Volumes 2. Bind Mounts
+
+- **volumes** -- volumes are folder on host machine hard drive which are mounted (made available, mapped) into containers.
+    Volumes can persist data. A container can write data into a volume and can read data from it. Managed by docker and we don't know where in out host machine data are stored.
+
+    Volumes are two types. 1) Anonymous volumes 2) Named volumes
+
+    Anonymous volumes: automacially creates volumn in the host machine. Anonymous volumes are removed then containers are   shut down. And recreated when container is created.
+
+    Named volumes: A defined path in the container is mapped to the created volume/mount. Great for data persistent which 
+        don't need to edit directly. Named volume can't be created in the Dockerfile. 
+
+
+- **Bind Mounts** -- Mapped host machine code with container folder. Great for persistent and editable data

@@ -34,7 +34,7 @@ app.post("/create", async (req, res) => {
 
   await fs.writeFile(tempFilePath, content);
 
-  console.log({finalFilePath})
+  console.log('hi')
 
   if (existsSync(finalFilePath)) {
     res.redirect("/exists");

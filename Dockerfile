@@ -1,12 +1,13 @@
 FROM node:18
 
-ARG DEFALUT_PORT=80
-
 WORKDIR /app
 
 COPY package.json .
 
 RUN npm install
+
+ARG DEFALUT_PORT=80
+
 
 COPY . .
 

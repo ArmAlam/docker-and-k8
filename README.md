@@ -48,6 +48,17 @@ Here are the list of commands that are used while wokring with docker.
 - **docker run -d --rm -p 3000:80 --name <container_name> -v <volume_name>:<container_folder_path> -v "<host_machine_absoule_folder_path>:/<container_workdir>" -v /app/<persistent_file>  <image_name> .** -- create bind mount volume. persistent_file needed to be mapped as anonymous volument. Otherwise can be removed/overwritten by bind mount. In BIND MOUNT, a folder get mapped to container.
 
 
+- **docker run -d -p 3000:80 --rm --name <container_name> -e PORT=8000  <image_name> .** -- -e flag sets an environment variable. Multiple env vars can be used passing  -e KEY=VALUE pairs.
+
+
+- **docker run -d -p 3000:80 --rm --name <container_name> --env-file ./.env  <image_name> .** -- use .env file as the environment variable file.
+
+- **docker run -d -p 3000:80 --rm --name <container_name> --build-arg <argument_name>=<argument_value>  <image_name> .** -- pass build time argument.
+
+
+
+
+
 
 
 

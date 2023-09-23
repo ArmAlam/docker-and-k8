@@ -70,3 +70,5 @@ Two types of external data sources - 1. Volumes 2. Bind Mounts
 - **Bind Mounts** -- Mapped host machine code with container folder. Great for persistent and editable data
 
 - **host.docker.internal** -- use host.docker.internal instead of localhost to communicate from container to localhost
+
+- **docker container inspect <container_name>** -- inspect a container

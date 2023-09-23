@@ -40,9 +40,12 @@ app.post("/favourites", async (req, res) => {
 
 mongoose
   //   .connect("mongodb://localhost:27017/swfavourites")
-  .connect("mongodb://host.docker.internal:27017/swfavourites") // localhost replaced with host.docker.internal for container to host machine communication
+  //   .connect("mongodb://host.docker.internal:27017/swfavourites") // localhost replaced with host.docker.internal for container to host machine communication
+  .connect("mongodb://172.17.0.2:27017/swfavourites") // got the url `172.17.0.2` usign the command docker container inspect mongodb (container name)
   .then(() => {
     console.log("connected");
-    app.listen(3000);
+    app.listen(3000, () => {
+      console.log("listening on port 3000");
+    });
   })
   .catch((err) => console.log({ err }));

@@ -1,11 +1,11 @@
-const { Schema, model } = require("mongoose");
+const mongoose = require("mongoose");
 
-const favouriteSchema = new Schema({
+const favouriteSchema = new mongoose.Schema({
   text: String,
   type: String,
   url: String,
 });
 
-const FavouriteModel = model("Favourite", favouriteSchema);
+const FavouriteModel = mongoose.model("Favourite", favouriteSchema);
 
 module.exports = FavouriteModel;

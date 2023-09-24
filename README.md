@@ -53,6 +53,13 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker run -d -p 3000:80 --rm --name <container_name> --build-arg <argument_name>=<argument_value> <image_name> .** -- pass build time argument.
 
+- **host.docker.internal** -- use host.docker.internal instead of localhost to communicate from container to localhost
+
+- **docker container inspect <container_name>** -- inspect a container
+
+- **docker network create <network_name>** -- creates a docker network;
+
+
 ## TERMS
 
 Two types of external data sources - 1. Volumes 2. Bind Mounts
@@ -69,6 +76,4 @@ Two types of external data sources - 1. Volumes 2. Bind Mounts
 
 - **Bind Mounts** -- Mapped host machine code with container folder. Great for persistent and editable data
 
-- **host.docker.internal** -- use host.docker.internal instead of localhost to communicate from container to localhost
-
-- **docker container inspect <container_name>** -- inspect a container
+- **Docker Network** -- Container uses network to communicate from one container to another container in a host machine.

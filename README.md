@@ -57,7 +57,10 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker container inspect <container_name>** -- inspect a container
 
-- **docker network create <network_name>** -- creates a docker network;
+- **docker network create <network_name>** -- creates a docker network.
+
+- **docker run -d -p 3000:80 --network <network_name> <image_name> .** -- the created container is become a part of the network.
+
 
 
 ## TERMS

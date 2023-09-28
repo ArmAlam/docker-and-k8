@@ -63,6 +63,12 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker run -d -p 3000:80 --network <network_name> <image_name> .** -- the created container is become a part of the network.
 
+- **docker compose up ** -- pulls and builds images. reads docker yaml file and make container services with the given specification.
+
+- **docker compose down ** -- stops container.
+
+
+
 ## TERMS
 
 Two types of external data sources - 1. Volumes 2. Bind Mounts

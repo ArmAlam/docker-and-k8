@@ -65,6 +65,8 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker compose up ** -- pulls and builds images. reads docker yaml file and make container services with the given specification.
 
+- **docker compose up -d ** -- pulls and builds images. reads docker yaml file and make container services with the given specification. Runs in detached mode
+
 - **docker compose down ** -- stops container.
 
 

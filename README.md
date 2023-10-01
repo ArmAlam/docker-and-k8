@@ -29,7 +29,7 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker container prune** -- Removes all stopped containers.
 
-- **docker image prune** -- Removes all unused images.
+- **docker image prune -a** -- Removes all unused images.
 
 - **docker run -p 3000:80 -d --rm <image_id>** -- Automatically removes a container when it stops.
 
@@ -70,7 +70,6 @@ Here are the list of commands that are used while wokring with docker.
 - **docker compose down ** -- stops associated container.
 
 - **docker exec -it <container_name> sh ** -- get access inside container using interactive shell.
-
 
 
 ## TERMS

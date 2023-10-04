@@ -90,3 +90,5 @@ Two types of external data sources - 1. Volumes 2. Bind Mounts
 - **Bind Mounts** -- Mapped host machine code with container folder. Great for persistent and editable data
 
 - **Docker Network** -- Container uses network to communicate from one container to another container in a host machine.
+
+- **Multi Stage Build** -- Multi stage build allows to have one Dockerfile, but define multiple build steps or stages. Stages can copy results from each other. Every FROM instruction in a Dockerfile creates a new stage. Even if the same image is as the previous step.

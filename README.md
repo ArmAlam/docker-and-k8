@@ -73,6 +73,8 @@ Here are the list of commands that are used while wokring with docker.
 
 - **docker exec -it <container_name> sh ** -- get access inside container using interactive shell.
 
+- **docker kill $(docker ps -q) ** -- kill and remove all running containers.
+
 ## TERMS
 
 Two types of external data sources - 1. Volumes 2. Bind Mounts

@@ -19,3 +19,5 @@
 - **KUBE CONTROLLER MANAGER** -- Watches and controls worker nodes. Reponsilbe for ensuring correct number of pods up and running.
 
 - **Services** -- A logical set (groups) of PODS with a unique, Pod and container independent IP address.
+
+- **KUBECTL** -- A tool for sending instructions to the cluster (e.g create a a new deployment, change deployment etc). Can send instructions to the master node.

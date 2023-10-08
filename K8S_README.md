@@ -25,3 +25,5 @@
 - **Objects** -- Kubernetes work with object. Some common objects are Pods, Deployments, Services, Volume etc.
 
 - **POD OBJECT** -- Kubernetes create pods and pods hold container. Pods run one or multiple containers. Pod can contains shared resources (e.g volumes). Pods can communicate with other pods. It has a cluster-internal IP address. Containers inside a pod can communicate via localhost.
+
+- **DEPLOYMENT OBJECT** -- Controls one or multiple pods. It is also known as controller. In Deployment object ,you set a desired state, and Kubernetes then changes the actual state. It defines which Pods and contaienrs to run and the number of instances. Deployments can be paused, deleted and rolled back. Deployments can be scaled dynamically and automaticaly.

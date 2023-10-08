@@ -21,3 +21,7 @@
 - **Services** -- A logical set (groups) of PODS with a unique, Pod and container independent IP address.
 
 - **KUBECTL** -- A tool for sending instructions to the cluster (e.g create a a new deployment, change deployment etc). Can send instructions to the master node.
+
+- **Objects** -- Kubernetes work with object. Some common objects are Pods, Deployments, Services, Volume etc.
+
+- **POD OBJECT** -- Kubernetes create pods and pods hold container. Pods run one or multiple containers. Pod can contains shared resources (e.g volumes). Pods can communicate with other pods. It has a cluster-internal IP address. Containers inside a pod can communicate via localhost.

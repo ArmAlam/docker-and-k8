@@ -4,13 +4,17 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 - **minikube dashboard .** -- view minikube dashboard.
 
+- **minikube service <service_name> .** -- open service in a browser.
+
 - **kubectl create deployment <deployment_name> --image=<image_name_hosted_on_docker_registry> .** -- create a deployment object
 
 - **kubectl get deployments .** -- list all deployments.
 
 - **kubectl get pods .** -- list all pods.
 
-- **kubectl delete deployment <deployment_name> .** -- delete a deployment object.
+- **kubectl delete deployment <deployment_name> .** -- deletes a deployment object.
+
+- **kubectl expose deployment <deployment_name> --type=LoadBalancer --port=<port_no> .** -- creates a service.
 
 ## TERMS
 

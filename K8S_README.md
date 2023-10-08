@@ -16,6 +16,8 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 - **kubectl expose deployment <deployment_name> --type=LoadBalancer --port=<port_no> .** -- creates a service.
 
+- **kubectl scale deployment/<deployement_name> --replicas=3 .** -- 3 replicas of the same pod will run. Used for scaling.
+
 ## TERMS
 
 - **POD** -- A pod is the smallest execution unit in Kubernetes which can hold and run multiple containers. Pod hosts one or more container and their resources (volumes, IP, run config etc).

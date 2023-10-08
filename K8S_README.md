@@ -1,3 +1,19 @@
+## KUBERNETES COMMANDS
+
+Here are the list of commands that are used while wokring with kubernetes.
+
+- **minikube dashboard .** -- view minikube dashboard.
+
+- **kubectl create deployment <deployment_name> --image=<image_name_hosted_on_docker_registry> .** -- create a deployment object
+
+- **kubectl get deployments .** -- list all deployments.
+
+- **kubectl get pods .** -- list all pods.
+
+- **kubectl delete deployment <deployment_name> .** -- delete a deployment object.
+
+## TERMS
+
 - **POD** -- A pod is the smallest execution unit in Kubernetes which can hold and run multiple containers. Pod hosts one or more container and their resources (volumes, IP, run config etc).
 
 - **WORKER NODE** -- POD with containers run inside a worker node. Worker node runs application containers. Nodes are virtual machine or instances with a certain hardware capacity which hosts one or multiple pods and communicate with the Cluster.

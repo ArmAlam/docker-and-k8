@@ -20,7 +20,15 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 ## TERMS
 
-- **POD** -- A pod is the smallest execution unit in Kubernetes which can hold and run multiple containers. Pod hosts one or more container and their resources (volumes, IP, run config etc).
+- **POD** -- A pod is the smallest execution unit in Kubernetes which can hold and run multiple containers. Pod hosts one or more container and their resources (volumes, IP, run config etc). It's an abstraction over container. Each pod has their own ip address (internal IP address) can communicate to other pods through it. If pod is removed, it's associated resources also removed.
+
+- **SERVICE** -- Service is basically a static IP address or permanent IP address that can be attached to each pod. Lifecyle of pod and service are not connected. So even if pod dies, service and it's ip address stays.
+
+- **INGRESS** -- It is an API object that provides routing rules to manage external access to the services in a Kubernetes cluster. Used to route traffice into cluster.
+
+- **CONFIGMAP** -- It usually contains configuration data like database url.
+
+- **SECRET** -- It is used to store secret data. Store data in base64 encoded format. It contains data like username, password etc.
 
 - **WORKER NODE** -- POD with containers run inside a worker node. Worker node runs application containers. Nodes are virtual machine or instances with a certain hardware capacity which hosts one or multiple pods and communicate with the Cluster.
 

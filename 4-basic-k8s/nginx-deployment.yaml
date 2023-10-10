@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nignx-deployment
+  labels:
+    app: nignx
+# spec for deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nignx
+  template:
+    metadata:
+      labels:
+        app: nignx
+    # spec for pod
+    spec:
+      containers:
+      - name: nignx
+        image: nignx
+        ports:
+        - containerPort: 80

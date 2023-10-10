@@ -34,6 +34,8 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 - **kubectl apply -f <file_name> .** -- takes a file as a configuration parameter and does whatever instruction is written there.
 
+- **kubectl delete -f <file_name> .** -- deletes generate component (service, deployment etc).
+
 - **kubectl expose deployment <deployment_name> --type=LoadBalancer --port=<port_no> .** -- creates a service.
 
 - **kubectl scale deployment/<deployement_name> --replicas=3 .** -- 3 replicas of the same pod will run. Used for scaling.

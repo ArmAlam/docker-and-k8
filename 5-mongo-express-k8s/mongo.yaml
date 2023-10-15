@@ -30,6 +30,7 @@ spec:
             secretKeyRef:
               name: mongodb-secret
               key: mongo-root-password
+# theree dashes indicates document separation in a yaml file
 ---
 apiVersion: v1
 kind: Service

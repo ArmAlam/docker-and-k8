@@ -62,15 +62,17 @@ Here are the list of commands that are used while wokring with kubernetes.
 
   1. Kubelet, 2.Kube Proxy, 3.Container Runtime.
 
-- **KUBELET** -- It is the communication device between master and worker node. Kubelet interacts with both the container and node. Kubelet starts pod with a container inside.
+- **KUBELET** -- It is the communication device between master and worker node. Kubelet interacts with both the container and node. Kubelet starts pod with a container inside. Kubelet is the agent that runs on each node in the cluster.The agent is responsible for making sure that containers are running on the nodes as expected.
 
 - **KUBE PROXY** -- Proxy service is reponsible for handling incoming and outgoing traffic to ensure that everything works as desired.
 
-- **API Server** -- It is a simple server inside the master node. It acts as the counter part for the kubelet services running on the worker node. This is the counter part for the communication between worker and master node.
+- **API Server** -- It is a simple server inside the master node. It acts as the frontend for the kubernetes. This is the counter part for the communication between worker and master node.
 
-- **Scheduler** -- Watches for new PODS. Select worker nodes to run them on.
+- **ETCD** -- It is a key value store. It is used by kubernetes to store all data that are used to manage the cluster.
 
-- **KUBE CONTROLLER MANAGER** -- Watches and controls worker nodes. Reponsilbe for ensuring correct number of pods up and running.
+- **Scheduler** -- Watches for new PODS. Select worker nodes to run them on. It is responsible for distributing work or containers accross multiple nodes. It looks for newly created containers and assign them to nodes.
+
+- **KUBE CONTROLLER MANAGER** -- Watches and controls worker nodes. Reponsilbe for ensuring correct number of pods up and running. Controllers are the brain behind the orchestration. They are responsible for noticing and responding when nodes, containers or endpoints goes down. Controllers make decisions to bring up new containers in such cases.
 
 - **Services** -- A logical set (groups) of PODS with a unique, Pod and container independent IP address.
 

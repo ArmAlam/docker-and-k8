@@ -85,3 +85,29 @@ Here are the list of commands that are used while wokring with kubernetes.
 - **DEPLOYMENT OBJECT** -- Controls one or multiple pods. It is also known as controller. In Deployment object ,you set a desired state, and Kubernetes then changes the actual state. It defines which Pods and contaienrs to run and the number of instances. Deployments can be paused, deleted and rolled back. Deployments can be scaled dynamically and automaticaly. It is an abstraction over Pods. Deployment manages a replica set. Replicaset manages all the replicas of a pod. Everything below deployment is handled by kubernetes.
 
 - **SERVICE OBJECT** -- to reach a pod and a container running in a pod, we need a service. It is responsible for exposing pods to other pods in the cluster, or to visitors outside of the cluster. Services group Pods together with a shared IP address. The IP address won't change. Services can allow external access to Pods. Withour services, Pods are very hard to reach and communication is difficult. Reaching a Podf from outside the Cluster is not possible at all without services.
+
+                              <------------------------------------------------------>
+
+A kubetes defination file always contain 4 top level fields. They are: 1. apiVersion 2.kind 3.metadata 4.spec
+
+- **apiVersion** -- This is the version of kubernetes API. Example: v1, apps/v1
+
+- **kind** -- kind refers to the type of object that we want to create. Example: Pod, Deployment, Service etc.
+
+- **metadata** -- Metadata is data about the object like its name, label etc.
+
+- **spec** -- spec field specifies the pod and its desired state (such as the container image name for each container within that pod.
+
+<!-- SAMPLE KUBERNETES CONFIG FILE -->
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    type: frontend
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+<!-- SAMPLE CONFIG FILE END -->

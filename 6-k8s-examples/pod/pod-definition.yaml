@@ -4,7 +4,7 @@ metadata:
   name: myapp-pod
   labels:
     app: myapp
-    # type: frontend | can contain any key value pair
+    
 spec:
   containers:
     - name: nginx-container

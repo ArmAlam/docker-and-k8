@@ -1,0 +1,24 @@
+# service is responsible for forwarding incoming request to respective nodes.
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+
+spec:
+  # type refers to the type of service we are creating, it could be ClusterIP, NodePort or LoadBalancer
+  type: NodePort
+  ports:
+  # targetPort is the port where Service forwards the request to. If targetPort isn't provided, it is assumed to be the same as port
+    - targetPort: 80
+    # service object port | port must be defined
+      port: 80
+      # nodePort is used to access externally. NodePort must be between 30000 to 32767. If not defined, a free port will be assigned
+      nodePort: 30008
+
+  # selector is responsible to connect the service to the POD. Links the service to the POD. 
+  selector:
+  # app and type are from POD definition, this links the service to the POD
+    app: myapp
+    type: frontend
+      
+

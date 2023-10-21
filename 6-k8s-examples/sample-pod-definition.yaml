@@ -3,8 +3,9 @@ kind: Pod
 metadata:
   name: myapp-pod
   labels:
+  # | can contain any key value pair
     app: myapp
-    # type: frontend | can contain any key value pair
+    type: frontend
 spec:
   containers:
     - name: nginx-container

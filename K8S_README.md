@@ -40,6 +40,8 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 - **kubectl scale deployment/<deployement_name> --replicas=3 .** -- 3 replicas of the same pod will run. Used for scaling.
 
+- **kubectl taint nodes <node_name> key=value:taint-effect .** -- 3 replicas of the same pod will run. Used for scaling.
+
 ## TERMS
 
 - **POD** -- A pod is the smallest execution unit in Kubernetes which can hold and run multiple containers. Pod hosts one or more container and their resources (volumes, IP, run config etc). It's an abstraction over container. Each pod has their own ip address (internal IP address) can communicate to other pods through it. If pod is removed, it's associated resources also removed.
@@ -85,6 +87,9 @@ Here are the list of commands that are used while wokring with kubernetes.
 - **DEPLOYMENT OBJECT** -- Controls one or multiple pods. It is also known as controller. In Deployment object ,you set a desired state, and Kubernetes then changes the actual state. It defines which Pods and contaienrs to run and the number of instances. Deployments can be paused, deleted and rolled back. Deployments can be scaled dynamically and automaticaly. It is an abstraction over Pods. Deployment manages a replica set. Replicaset manages all the replicas of a pod. Everything below deployment is handled by kubernetes.
 
 - **SERVICE OBJECT** -- to reach a pod and a container running in a pod, we need a service. It is responsible for exposing pods to other pods in the cluster, or to visitors outside of the cluster. Services group Pods together with a shared IP address. The IP address won't change. Services can allow external access to Pods. Withour services, Pods are very hard to reach and communication is difficult. Reaching a Podf from outside the Cluster is not possible at all without services.
+
+- **Taints and Tolerations** -- Taints and Tolerations are used to set restrictions on what PODs can be scheduled on a node. Taints are set on nodes and tolerations are set on pods. Example command: kubectl taint nodes <node_name> key=value:taint-effect. Here 'taint-effect' defines what would happen to the pod if they don't tolerate the taint. There are 3 taint effects. 1. NoSchedule (Pod will not be scheduled on the node), 2. PreferNoSchedule (System will to avoid placing a node. But thats not guaranteed), 3. NoExecute (New pod will not be scheduled on the node and existing node if any will be evicted if they tolerate the taint ). Tolerations are added to pods.
+
 
                               <------------------------------------------------------>
 

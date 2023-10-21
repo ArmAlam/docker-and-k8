@@ -10,4 +10,10 @@ spec:
   containers:
     - name: nginx-container
       image: nginx
+  # tolerations sample
+  # tolerations:
+  #   -key: "app"
+  #   operator: "Equal"
+  #   value: "blue"
+  #   effect: "NoSchedule"
 # kubectl create -f sample-pod-definition.yaml --> this command will create a POD

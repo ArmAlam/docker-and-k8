@@ -44,6 +44,9 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 ## TERMS
 
+- **NODE .** -- A node is a machine physical or virtual on which kubernetes is installed. Node is a woker machine, this is where container launched by kubernetes.
+
+
 - **POD** -- A pod is the smallest execution unit in Kubernetes which can hold and run multiple containers. Pod hosts one or more container and their resources (volumes, IP, run config etc). It's an abstraction over container. Each pod has their own ip address (internal IP address) can communicate to other pods through it. If pod is removed, it's associated resources also removed.
 
 - **SERVICE** -- Service is basically a static IP address or permanent IP address that can be attached to each pod. Lifecyle of pod and service are not connected. So even if pod dies, service and it's ip address stays.
@@ -60,7 +63,7 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 - **MASTER NODE / CONTROL PLANE** -- Master node is responsible for cluster management and for providing the API that is used to configure and manage resources within the Kubernetes cluster. Master node controls all worker nodes. There are 4 processes that run on every master node. They are: 1. API server, 2. Scheduler, 3. Controller Manager, 3. etcd
 
-- **CLUSTER** --: All together (above components) forms a cluster. Cluster is a set of machines which are running the Containerized Application (Worker Nodes) or control other nodes (Master Node). A cluster must have the follwoing processes:
+- **CLUSTER** --: All together (above components) forms a cluster. Cluster is a set of machines which are running the Containerized Application (Worker Nodes) or control other nodes (Master Node). A cluster is a set of nodes grouped together. A cluster must have the follwoing processes:
 
   1. Kubelet, 2.Kube Proxy, 3.Container Runtime.
 

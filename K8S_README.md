@@ -16,11 +16,19 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 - **kubectl get replicaset .** -- list replicasets.
 
+- **kubectl delete replicaset <replicaset_name>.** -- remove replicaset.
+
+- **kubectl replace -f <replicaset_yaml_file>.** -- replace or update replicaset.
+
+- **kubectl scale -replica=6 -f <replicaset_yaml_file>.** -- scale replicaset from command line.
+
 - **kubectl get services .** -- list all services.
 
 - **kubectl get nodes .** -- get status of nodes.
 
 - **kubectl get pods .** -- list all pods.
+
+- **kubectl run <name> --image=<image_from_registry> .** -- create a pod.
 
 - **kubectl logs <pod_name> .** -- shows log of a pod.
 
@@ -84,6 +92,9 @@ Here are the list of commands that are used while wokring with kubernetes.
 - **KUBECTL .** -- A tool for sending instructions to the cluster (e.g create a a new deployment, change deployment etc). Can send instructions to the master node.
 
 - **Objects .** -- Kubernetes work with object. Some common objects are Pods, Deployments, Services, Volume etc.
+
+- **ReplicaSets .** -- The replicaSets help us to run multiple instances of a single pod in the kubernetes cluster thus providing high availability. ReplicaSets can manage pods that that weren't created as part of the replicaSet creation process.
+
 
 - **POD OBJECT .** -- Kubernetes create pods and pods hold container. Pods run one or multiple containers. Pod can contains shared resources (e.g volumes). Pods can communicate with other pods. It has a cluster-internal IP address. Containers inside a pod can communicate via localhost.
 

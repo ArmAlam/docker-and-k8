@@ -28,6 +28,8 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 - **kubectl get pods .** -- list all pods.
 
+- **kubectl get all .** -- list all objects.
+
 - **kubectl run <name> --image=<image_from_registry> .** -- create a pod.
 
 - **kubectl logs <pod_name> .** -- shows log of a pod.

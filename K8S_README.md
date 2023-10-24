@@ -50,7 +50,7 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 - **kubectl scale deployment/<deployement_name> --replicas=3 .** -- 3 replicas of the same pod will run. Used for scaling.
 
-- **kubectl taint nodes <node_name> key=value:taint-effect .** -- 3 replicas of the same pod will run. Used for scaling.
+- **kubectl taint nodes <node_name> key=value:taint-effect .** -- add taint in a node.
 
 ## TERMS
 

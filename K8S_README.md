@@ -59,7 +59,7 @@ Here are the list of commands that are used while wokring with kubernetes.
 
 - **POD .** -- A pod is the smallest execution unit in Kubernetes which can hold and run multiple containers. Pod hosts one or more container and their resources (volumes, IP, run config etc). It's an abstraction over container. Each pod has their own ip address (internal IP address) can communicate to other pods through it. If pod is removed, it's associated resources also removed.
 
-- **SERVICE .** -- Service is basically a static IP address or permanent IP address that can be attached to each pod. Lifecyle of pod and service are not connected. So even if pod dies, service and it's ip address stays.
+- **SERVICE .** -- Service enables connectivity between applications within the cluster. It also exposes application outside the cluster to an user.  Service is basically a static IP address or permanent IP address that can be attached to each pod. Lifecyle of pod and service are not connected. So even if pod dies, service and it's ip address stays. A service enables communication between applications within a kuberntes cluster. Different kinds of service are: 1) Cluster IP: Lives within the cluser that is not exposed externally and helps different services to communicate with each other. 2) NodePort: Exposes the application on a port on the node to be made accessible to the external users. 3) LoadBalaner: It provisions a load balancer  for our service. Distribute load accross different web servers.
 
 - **INGRESS .** -- It is an API object that provides routing rules to manage external access to the services in a Kubernetes cluster. Used to route traffice into cluster.
 
